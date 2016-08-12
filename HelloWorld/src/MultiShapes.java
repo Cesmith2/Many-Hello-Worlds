@@ -142,7 +142,7 @@ public class MultiShapes {
         //selection style
         for(int i=0; i<shapes.size(); i++) {
         	int lowerVal = i;
-        	for(int j=i; j<=shapes.size(); ) {
+        	for(int j=i; j<=shapes.size()-1; j++) {
         		if(shapes.get(lowerVal).getArea()>shapes.get(j).getArea()) {
         			lowerVal = j;
         		}
@@ -153,7 +153,6 @@ public class MultiShapes {
         	shapes.get(i).setArea(temp);
         }
         
-        System.out.println(":");
         //print
         for(int i=0; i<shapes.size();i++) {
         	System.out.println(shapes.get(i).getArea() + ":");
